@@ -3,6 +3,8 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
+import traceback
+
 import maya.cmds as cmds
 
 def calculate_vertex_positions_center(pos_list):
@@ -194,10 +196,8 @@ def execute(x_scale=1.0, y_scale=1.0, z_scale=1.0, is_bbox=True):
     except Exception as e:
         # Print the error message
         cmds.warning("An error occurred: {}".format(str(e)))
-        # Print the file name where the error occurred
-        cmds.warning("File name: {}".format(__file__))
-        # Print the line number where the error occurred
-        cmds.warning("Line number: {}".format(e.__traceback__.tb_lineno))
+        # Print the traceback
+        cmds.warning(traceback.format_exc())
     finally:
         # Close the undo chunk
         cmds.undoInfo(closeChunk=True)
