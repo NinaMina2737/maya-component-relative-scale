@@ -3,6 +3,8 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
+import traceback
+
 import maya.cmds as cmds
 from maya.app.general.mayaMixin import MayaQWidgetBaseMixin
 from PySide2 import QtCore, QtWidgets
@@ -105,6 +107,8 @@ def execute():
     except Exception as e:
         # Print the error message
         cmds.warning("An error occurred: {}".format(str(e)))
+        # Print the traceback
+        cmds.warning(traceback.format_exc())
 
 if __name__ == "__main__":
     execute()
