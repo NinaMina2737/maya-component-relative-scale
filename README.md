@@ -1,4 +1,4 @@
-# Relative Scale by Selection Center
+# Maya Component Relative Scale
 
 [Japanese](README-ja.md)
 
@@ -9,14 +9,14 @@
 
 ## Installation
 
-1. Download zip file from [latest release](https://github.com/NinaMina2737/relative-scale-by-selection-center/releases/latest). and extract the archive.
-2. Move `relative-scale-by-selection-center` folder to your Maya's script folder (e.g. `C:\Users\<user>\Documents\maya\scripts`)
+1. Download zip file from [latest release](https://github.com/NinaMina2737/maya-component-relative-scale/releases/latest). and extract the archive.
+2. Move `maya-component-relative-scale` folder to your Maya's script folder (e.g. `C:\Users\<user>\Documents\maya\scripts`)
 3. Drag and drop `install.py` to Maya's viewport.
-4. Then, you can see `relativeScaleBySelectionCenter` in your active shelf.
+4. Then, you can see `componentRelativeScale` in your active shelf.
 
 ## Usage
 
-1. Run `relativeScaleBySelectionCenter` from your shelf.
+1. Run `componentRelativeScale` from your shelf.
 2. Select objects you want to scale.
 3. Input scale value.
 4. Click `Scale` button.
