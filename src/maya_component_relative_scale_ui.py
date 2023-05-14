@@ -9,8 +9,8 @@ import maya.cmds as cmds
 from maya.app.general.mayaMixin import MayaQWidgetBaseMixin
 from PySide2 import QtCore, QtWidgets
 
-import relative_scale_by_selection_center as rsbsc
-reload(rsbsc)
+import maya_component_relative_scale as mcrs
+reload(mcrs)
 
 class ScaleComponentsUI(MayaQWidgetBaseMixin, QtWidgets.QWidget):
     """
@@ -87,7 +87,7 @@ class ScaleComponentsUI(MayaQWidgetBaseMixin, QtWidgets.QWidget):
         y_scale = self.scale_y_spinbox.value()
         z_scale = self.scale_z_spinbox.value()
         is_bbox = self.is_bbox_checkbox.isChecked()
-        rsbsc.execute(x_scale, y_scale, z_scale, is_bbox)
+        mcrs.execute(x_scale, y_scale, z_scale, is_bbox)
 
 def execute():
     """
