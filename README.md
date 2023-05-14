@@ -1,4 +1,4 @@
-# Relative Scale by Selection Center
+# Maya Component Relative Scale
 
 [Japanese](README-ja.md)
 
