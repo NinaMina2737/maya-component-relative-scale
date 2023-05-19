@@ -12,6 +12,8 @@ from PySide2 import QtCore, QtWidgets
 import maya_component_relative_scale as mcrs
 reload(mcrs)
 
+WINDOW_TITLE = "Component Relative Scale"
+
 class ScaleComponentsUI(MayaQWidgetBaseMixin, QtWidgets.QWidget):
     """
     A UI for scaling components relative to their center or bounding box.
@@ -28,7 +30,7 @@ class ScaleComponentsUI(MayaQWidgetBaseMixin, QtWidgets.QWidget):
         Initializes the class.
         """
         super(self.__class__, self).__init__()
-        self.setWindowTitle("Component Relative Scale")
+        self.setWindowTitle(WINDOW_TITLE)
         self.create_widget()
         self.create_layout()
 
@@ -98,8 +100,8 @@ def execute():
     """
     try:
         # Check if the window already exists
-        if cmds.window("joint_symmetry_window", exists=True):
-            cmds.deleteUI("joint_symmetry_window")
+        if cmds.window(WINDOW_TITLE, exists=True):
+            cmds.deleteUI(WINDOW_TITLE)
 
         # Create the window
         window = ScaleComponentsUI()
